@@ -10,7 +10,7 @@ export const Hero = () => {
       <div className={
         clsx(
           "absolute rounded-[100%] bg-black left-1/2 -translate-x-1/2 border-[#B48CDE]",
-          "h-[375px] w-[750px] sm:w-[1536px] sm:h-[768px] lg:w-[2400px] lg:h-[1200px]",
+          "h-[375px] w-[750px] sm:w-[1536px] sm:h-[768px] lg:w-[2400px] lg:h-[1200px] xl:w-[4000px] xl:h-[1400px]",
           "bg-[radial-gradient(closest-side,#000_82%,#9560EB)]",
           "top-[calc(100%-96px)] sm:top-[calc(100%-120px)]"
         )
