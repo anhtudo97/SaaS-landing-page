@@ -53,7 +53,7 @@ const AccordionItem = ({ question, answer }: AccordionItemProps) => {
 export const FAQs = () => {
   return <div className="bg-black text-white bg-gradient-to-b from-[#5D2CA8] to-black py-[72px] sm:py-24">
     <div className="container">
-      <h2 className="text-center text-5xl sm:text-6xl sm:max-w-[648px] font-bold tracking-tighter">Frequently Asked Questions</h2>
+      <h2 className="text-center text-5xl sm:text-6xl sm:max-w-[648px] mx-auto font-bold tracking-tighter">Frequently Asked Questions</h2>
       <div className="mt-12 max-w-[648px] mx-auto">
         {items.map(({ answer, question }, index) => (
           <AccordionItem key={index} answer={answer} question={question} />
