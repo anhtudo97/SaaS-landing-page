@@ -1,3 +1,5 @@
+"use client"
+
 import acmeLogo from "../assets/images/acme.png";
 import quantumLogo from "../assets/images/quantum.png";
 import echoLogo from "../assets/images/echo.png";
@@ -6,6 +8,7 @@ import pulseLogo from "../assets/images/pulse.png";
 import apexLogo from "../assets/images/apex.png";
 import Image from "next/image";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 const images = [
   { src: acmeLogo, alt: "Acme Logo" },
@@ -23,11 +26,16 @@ export const LogoTicker = () => {
       <div className={
         clsx(
           "overflow-hidden mt-9 relative",
-          "before:content-[''] before:absolute before:h-full before:w-5 before:left-0 before:top-0 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))]",
+          "before:content-[''] before:z-10 before:absolute before:h-full before:w-5 before:left-0 before:top-0 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))]",
           "after:content-[''] after:absolute after:h-full after:w-5 after:right-0 after:top-0 after:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))]"
         )
       }>
-        <div className="flex gap-16">
+        <motion.div
+          className="flex gap-16 pr-16 flex-none"
+          initial={{ translateX: 0 }}
+          animate={{ translateX: "-50%" }}
+          transition={{ duration: 5, ease: "linear", repeat: Infinity }}
+        >
           {
             images.map(({ alt, src }) => {
               return (
@@ -40,7 +48,19 @@ export const LogoTicker = () => {
               );
             })
           }
-        </div>
+          {
+            images.map(({ alt, src }) => {
+              return (
+                <Image
+                  key={`${alt}`}
+                  src={src}
+                  alt={alt}
+                  className="flex-none h-8 w-auto"
+                />
+              );
+            })
+          }
+        </motion.div>
       </div>
     </div>
   </div>;
