@@ -1,8 +1,11 @@
+"use client";
+
 import ArrowWIcon from "@/assets/icons/arrow-w.svg";
 import cursorImage from "@/assets/images/cursor.png";
 import messageImage from "@/assets/images/message.png";
 import clsx from "clsx";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
@@ -34,20 +37,34 @@ export const Hero = () => {
               <br />at a Time
             </h1>
 
-            <Image
-              src={cursorImage}
-              alt="cursor_image"
-              width={200}
-              height={200}
+            <motion.div
               className="absolute right-[476px] top-[108px] hidden sm:inline"
-            />
-            <Image
-              src={messageImage}
-              alt="message_image"
-              width={200}
-              height={200}
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={cursorImage}
+                alt="cursor_image"
+                width={200}
+                height={200}
+                className="max-w-none"
+                draggable="false"
+              />
+            </motion.div>
+            <motion.div
               className="absolute top-[56px] left-[498px] hidden sm:inline"
-            />
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={messageImage}
+                alt="message_image"
+                width={200}
+                height={200}
+                className="max-w-none"
+                draggable="false"
+              />
+            </motion.div>
           </div>
         </div>
         <div className="flex justify-center mt-8">

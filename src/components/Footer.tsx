@@ -1,6 +1,6 @@
 import Instagram from "@/assets/icons/instagram.svg";
 import Tiktok from "@/assets/icons/tiktok.svg";
-import Twitter from "@/assets/icons/twitter.svg";
+import Youtube from "@/assets/icons/youtube.svg";
 import Linkedin from "@/assets/icons/linkedin.svg";
 import XSocial from "@/assets/icons/x-social.svg";
 
@@ -12,7 +12,7 @@ export const Footer = () => {
         <ul className="flex justify-center gap-2.5">
           <li><Instagram /></li>
           <li><Tiktok /></li>
-          <li><Twitter /></li>
+          <li><Youtube /></li>
           <li><Linkedin /></li>
           <li><XSocial /></li>
         </ul>
