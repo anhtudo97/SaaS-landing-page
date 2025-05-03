@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import acmeLogo from "../assets/images/acme.png";
 import quantumLogo from "../assets/images/quantum.png";
