@@ -34,7 +34,7 @@ export const LogoTicker = () => {
           className="flex gap-16 pr-16 flex-none"
           initial={{ translateX: 0 }}
           animate={{ translateX: "-50%" }}
-          transition={{ duration: 5, ease: "linear", repeat: Infinity }}
+          transition={{ duration: 10, ease: "linear", repeat: Infinity }}
         >
           {
             images.map(({ alt, src }) => {
